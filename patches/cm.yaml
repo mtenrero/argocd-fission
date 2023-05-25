@@ -1,0 +1,7 @@
+# cm.yaml
+data:
+  configManagementPlugins: |
+    - name: fission
+      generate:
+        command: [sh, -xc]
+        args: ['fission spec apply --delete --wait "$FISSION_PATH"']

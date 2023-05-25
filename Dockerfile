@@ -7,7 +7,7 @@ USER root
 # (e.g. curl, awscli, gpg, sops)
 RUN apt-get update && \
     apt-get install -y \
-        curl \
+        curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     curl -Lo fission https://github.com/fission/fission/releases/download/v1.19.0/fission-v1.19.0-linux-amd64 \
